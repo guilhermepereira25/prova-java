@@ -18,13 +18,20 @@ public class Main {
         Saber sabreVermelho = new Saber("Um sabre de luz vermelho", 500);
         Blast blastLazer = new Blast("Blast Lazer", 1000);
 
-        Jedi jedi = new Jedi("Obi-wan Kenobi", "Jedi");
+        ArrayList<String> weapons = new ArrayList<>();
+
+        weapons.add("Sabre de luz verde");
+        weapons.add("Sabre de luz azul");
+        weapons.add("Sabre de luz vermelho");
+
+        Jedi jedi = new Jedi("Obi-wan Kenobi", "Jedi", weapons);
         jedi.levitation();
         sabreVermelho.pickUp();
         blastLazer.shot();
         blastLazer.drop();
+        jedi.getWeaponsList(weapons);
 
-        Sith sith = new Sith("Darth Vader", "Sith");
+        Sith sith = new Sith("Darth Vader", "Sith", weapons);
         sith.mindControl();
         sabreAzul.slash();
         sabreVermelho.pickUp();

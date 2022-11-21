@@ -1,7 +1,7 @@
 public class Pessoa {
-    public String nome;
-    public String sobrenome;
-    public String sexo;
+    private String nome;
+    private String sobrenome;
+    private String sexo;
 
     public Pessoa() {}
 

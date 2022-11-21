@@ -1,15 +1,16 @@
 package Force;
 
-import Weapon.Weapon;
-
 import java.util.ArrayList;
 
 public class Sith implements Force {
     private String nome;
     private String titulo;
-    public Sith (String nome, String titulo) {
+
+    private ArrayList<String> weapons;
+    public Sith (String nome, String titulo, ArrayList<String> weapons) {
         this.nome = nome;
         this.titulo = titulo;
+        this.weapons = weapons;
     }
 
     public String getNome() {
@@ -22,6 +23,12 @@ public class Sith implements Force {
 
     public void lightning() {
 
+    }
+
+    public void getWeaponsList(ArrayList weapons) {
+        for (int i=0; i< weapons.size(); i++) {
+            System.out.println(weapons.get(i) + "");
+        }
     }
 
     @Override

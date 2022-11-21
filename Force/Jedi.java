@@ -1,15 +1,17 @@
 package Force;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class Jedi implements Force {
-    public String nome;
-    public String titulo;
+    private String nome;
+    private String titulo;
 
-    public Jedi (String nome, String titulo) {
+    private ArrayList<String> weapons;
+
+    public Jedi (String nome, String titulo, ArrayList<String> weapons) {
         this.nome = nome;
         this.titulo = titulo;
+        this.weapons = weapons;
     }
 
     public void patiente() {
@@ -17,6 +19,13 @@ public class Jedi implements Force {
 
     public String getNome() {
         return this.nome;
+    }
+
+    @Override
+    public void getWeaponsList(ArrayList weapons) {
+        for (int i=0; i<weapons.size(); i++) {
+            System.out.println(weapons.get(i) + "");
+        }
     }
 
     @Override
